@@ -4,7 +4,7 @@
   "year": "2026",
   "category": "Music Covers",
   "industry": "ENTERTAINMENT",
-  "thumbnail": "/uploads/osom.png",
+  "thumbnail": "/uploads/osom-2-.webp",
   "services": [],
   "content": {
     "brandMotion": {
@@ -14,9 +14,11 @@
     "motionAssets": [],
     "blocks": [
       {
-        "type": "two-column-image",
-        "img1": "/uploads/osom-2-.webp",
-        "img2": "/uploads/osom-1-.webp"
+        "type": "gallery",
+        "images": [
+          "/uploads/osom-2-.webp",
+          "/uploads/osom-1-.webp"
+        ]
       }
     ]
   }
