@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GB Studios — Creative Studio</title>
+    <meta name="description" content="GB Studios is a premium creative studio specializing in motion design, brand identity, and immersive event visuals." />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:title" content="GB Studios — Creative Studio" />
+    <meta property="og:description" content="A premium creative studio specializing in motion design, brand identity, and immersive event visuals." />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Netlify Identity (powers Decap CMS login via Git Gateway) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--
+      Hidden static forms so Netlify's build-time bot can detect and register
+      these forms. The real, visible forms are rendered by React in src/App.jsx
+      and POST to "/" with the same form-name + field names, so submissions
+      land in Site settings > Forms in the Netlify dashboard.
+    -->
+    <form name="project-brief" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="fullName" />
+      <input type="text" name="company" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="service" />
+      <input type="text" name="budget" />
+      <textarea name="description"></textarea>
+      <input type="text" name="contactMethod" />
+      <input type="file" name="attachments" />
+      <input type="text" name="bot-field" />
+    </form>
+
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+
+    <script>
+      // Redirect straight into the CMS after someone accepts an Identity
+      // invite or logs in, per Netlify's recommended Decap CMS setup.
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

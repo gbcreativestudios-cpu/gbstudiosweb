@@ -1,0 +1,30 @@
+{
+  "title": "Orange State of Mind",
+  "client": "Afro Juju",
+  "year": "2026",
+  "category": "Music Covers",
+  "industry": "ENTERTAINMENT",
+  "thumbnail": "/uploads/osom.png",
+  "services": [],
+  "content": {
+    "brandMotion": {
+      "active": false,
+      "video_url": ""
+    },
+    "motionAssets": [],
+    "blocks": [
+      {
+        "type": "full-width-image",
+        "url": "/uploads/osom.png"
+      },
+      {
+        "type": "text",
+        "text": "to test"
+      },
+      {
+        "type": "full-width-image",
+        "url": "/uploads/osom-1-.png"
+      }
+    ]
+  }
+}
